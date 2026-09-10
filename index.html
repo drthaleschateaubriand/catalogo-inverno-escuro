@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Inverno Escuro | Todas as combinações</title>
+<style>
+:root{--navy:#101a30;--ink:#172337;--muted:#526075;--line:#d9e1eb;--paper:#f3f5f8;--green:#075847;--blue:#294a86}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+header{background:var(--navy);color:white;padding:34px max(24px,calc((100vw - 1360px)/2));}header .eyebrow{color:#c6d4e9;letter-spacing:.13em;font-size:12px;font-weight:700}h1{font-size:34px;line-height:1.15;margin:12px 0}header p{max-width:1000px;color:#dce4f1;margin:12px 0 0}main{max-width:1408px;margin:auto;padding:24px}
+button,input,select{font:inherit}button{cursor:pointer;border:1px solid #cad4e1;border-radius:7px;background:white;color:var(--ink);padding:9px 13px}button:hover{background:#edf1f6}button:disabled{opacity:.4;cursor:default}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #4478c8;outline-offset:2px}
+.tools{background:white;border:1px solid var(--line);border-radius:10px;padding:18px;margin-bottom:18px}.filters{display:grid;grid-template-columns:1.05fr 1.4fr 1.4fr 1.1fr 1.2fr;gap:12px}label{display:block;font-size:12px;font-weight:700;color:var(--muted)}select,input[type=search]{width:100%;padding:10px 8px;border:1px solid #c9d2e0;border-radius:6px;background:white;color:var(--ink);margin-top:5px;font-size:14px;min-height:43px}.toolbar-bottom{display:flex;align-items:end;gap:12px;flex-wrap:wrap;margin-top:14px}.search{flex:1;min-width:220px}.check{display:flex;align-items:center;gap:6px;font-size:14px;padding:10px 0;white-space:nowrap}.check input{width:18px;height:18px}
+.resultbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:16px 0}.resultbar p{margin:0}.muted{color:var(--muted)}.pager{display:flex;align-items:center;gap:9px}.page-label{font-variant-numeric:tabular-nums;min-width:125px;text-align:center;font-size:13px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}.look{background:white;border:1px solid var(--line);border-radius:9px;overflow:hidden;break-inside:avoid}.look-head{display:flex;align-items:center;justify-content:space-between;padding:13px 14px 0}.look-id{font-size:18px;font-weight:750;letter-spacing:.03em}.badge{display:inline-block;font-size:11px;font-weight:750;letter-spacing:.025em;background:#e1f0ea;color:var(--green);padding:3px 7px;border-radius:4px;margin-left:8px}.badge.conditional{background:#e5ecf9;color:var(--blue)}.fav{padding:4px 8px;min-width:34px;font-size:21px;line-height:1.1;border-color:transparent}.fav[aria-pressed=true]{color:#a20068;background:#f9e8f2}.composition{padding:16px 10px 8px;display:flex;gap:3px;align-items:flex-end}.piece{flex:1;min-width:0;margin:0;text-align:center}.piece img{display:block;width:100%;height:146px;object-fit:contain;background:#fff}.piece figcaption{font-size:12px;line-height:1.3;color:var(--muted);padding-top:7px}.piece figcaption strong{display:block;color:var(--ink);font-size:14px}.look-body{padding:8px 15px 15px}.colors{display:flex;gap:8px 12px;flex-wrap:wrap;margin:7px 0 9px}.color{font-size:12px;display:flex;align-items:center;gap:5px}.swatch{display:inline-block;width:11px;height:11px;border:1px solid #cbd4e1;border-radius:50%}.look-info{font-size:12px;color:var(--muted);margin:7px 0}.condition{border-left:3px solid var(--blue);padding:0 0 0 9px;font-size:12px;color:#233f70;margin-top:9px}.condition p{margin:6px 0}.condition summary{font-weight:700;cursor:pointer}.condition[open] summary{margin-bottom:8px}.footnote{padding-top:15px;font-size:12px;color:var(--muted)}.empty{padding:35px;background:white;border:1px solid var(--line);border-radius:8px;grid-column:1/-1}
+details.guide{background:white;border:1px solid var(--line);padding:15px 18px;border-radius:8px;margin:0 0 18px;font-size:14px}details.guide>summary{cursor:pointer;font-weight:700}.guide p{max-width:1060px}.guide-list{display:grid;grid-template-columns:1fr 1fr;gap:5px 25px;padding-top:10px}.guide-list p{margin:5px 0}.legend-photos{display:flex;flex-wrap:wrap;gap:12px;margin:15px 0}.legend-photos figure{margin:0;text-align:center}.legend-photos img{height:110px;width:90px;object-fit:contain}.legend-photos figcaption{font-size:12px}.pdf-ref{font-size:11px;color:var(--muted);margin-top:8px}.print-title{display:none}footer{margin:25px 0 15px;font-size:12px;color:var(--muted)}
+@media(min-width:1500px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}.piece img{height:137px}}@media(max-width:1050px){.filters{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.guide-list{grid-template-columns:1fr}}@media(max-width:620px){main{padding:13px}header{padding:25px 17px}h1{font-size:28px}.filters{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}.tools{padding:13px}.resultbar{align-items:flex-start}.pager{width:100%;justify-content:center}.toolbar-bottom{gap:9px}.piece img{height:153px}button{min-height:42px}.fav{min-width:42px}}
+@media print{@page{size:A4 portrait;margin:12mm}body{background:#fff;font-size:10pt}header,.tools,.guide,.pager,.fav,.footnote,footer{display:none!important}main{padding:0}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.look{border-radius:0}.piece img{height:112px}.look-id{font-size:13pt}.condition{font-size:8.5pt}.print-title{display:block;font-size:15pt;margin-bottom:12px}.resultbar{margin:0 0 12px}.colors,.look-info{font-size:9pt}}
+</style>
+</head><body>
+<header><div class="eyebrow">INVERNO ESCURO / CATÁLOGO COMPLETO</div><h1 id="title">Todas as combinações de cor</h1><p id="totals"></p><p>Uma parte de cima e uma calça, ou o macacão 89, com calçado e até um colete e um blazer. Cada código identifica um conjunto diferente de peças.</p></header>
+<main><div class="print-title">Inverno Escuro / combinações selecionadas</div>
+<details class="guide"><summary>Como usar, regras e peças de sobreposição</summary><div class="guide-list"><p><strong>Direta:</strong> usa peças classificadas para priorizar. A compatibilidade é visual e de cor; confira o caimento das sobreposições ao vestir.</p><p><strong>Condicional:</strong> cumpra todas as verificações mostradas no look antes de usar. As fotos continuam mostrando as peças originais, inclusive detalhes que precisam ser ajustados.</p><p><strong>Camadas:</strong> 52, 66 e 69 são coletes; 91 é o blazer externo. O 69 sempre vai sobre outra peça. Dois coletes não são combinados.</p><p><strong>Cores:</strong> máximo de três, incluindo neutros e metais visíveis. Uma estampa por conjunto. As cores quentes do inventário anterior continuam excluídas.</p><p><strong>Dourado:</strong> apenas um item com adorno dourado pequeno e secundário, sem prata ou outro acessório adicional no conjunto.</p><p><strong>Monocromático:</strong> roupa na escala preto/grafite/chumbo/cinza ou toda marinho, com calçado preto de apoio. Duas cores joia precisam de colete ou blazer escuro.</p></div><div id="legend" class="legend-photos"></div><p>Renda e transparência: eventual forro deve repetir uma cor já presente. Não some bolsas, joias ou cintos de outra cor sem recontar o conjunto. Os favoritos ficam salvos neste navegador quando o armazenamento local estiver disponível.</p></details>
+<section class="tools" aria-label="Filtros de combinações"><div class="filters">
+<label>Situação<select id="status"><option value="direct">Diretas por cor</option><option value="conditional">Condicionais</option><option value="all">Todas</option></select></label>
+<label>Parte de cima<select id="top"><option value="">Todas</option></select></label>
+<label>Calça<select id="bottom"><option value="">Todas</option><option value="none">Macacão (sem calça)</option></select></label>
+<label>Calçado<select id="shoe"><option value="">Todos</option></select></label>
+<label>Sobreposição<select id="layers"><option value="all">Todas</option></select></label>
+</div><div class="toolbar-bottom"><label class="search">Buscar código do look ou números das peças<input id="search" type="search" placeholder="Ex.: L0020 ou 31 17 91" autocomplete="off"></label><label class="check"><input id="onlyFav" type="checkbox">Somente favoritos</label><button id="reset" type="button">Limpar filtros</button><button id="print" type="button">Imprimir página</button></div></section>
+<div class="resultbar"><p id="results" role="status" aria-live="polite"></p><div class="pager"><button class="prev" type="button" aria-label="Página anterior">← Anterior</button><span class="page-label"></span><button class="next" type="button" aria-label="Próxima página">Próxima →</button></div></div>
+<section id="grid" class="grid" aria-label="Looks encontrados"></section>
+<div class="resultbar bottom-bar"><p class="muted">24 looks por página</p><div class="pager"><button class="prev" type="button" aria-label="Página anterior">← Anterior</button><span class="page-label"></span><button class="next" type="button" aria-label="Próxima página">Próxima →</button></div></div>
+<p class="footnote">As classificações dependem das cores aparentes no catálogo original. Uma diferença de luz, edição ou tecido pode exigir reavaliação. O atlas em PDF usa os mesmos códigos L e B.</p><footer id="footer"></footer></main>
+<script>window.__CATALOG_CHUNKS=[];</script>
+<script src="data/catalog-01.js"></script>
+<script src="data/catalog-02.js"></script>
+<script src="data/catalog-03.js"></script>
+<script src="data/catalog-04.js"></script>
+<script src="data/catalog-05.js"></script>
+<script src="data/catalog-06.js"></script>
+<script src="data/catalog-07.js"></script>
+<script src="data/catalog-08.js"></script>
+<script src="data/catalog-09.js"></script>
+<script src="data/catalog-10.js"></script>
+<script src="data/catalog-11.js"></script>
+<script src="data/catalog-12.js"></script>
+<script src="data/catalog-13.js"></script>
+<script src="data/catalog-14.js"></script>
+<script src="data/catalog-15.js"></script>
+<script src="data/catalog-16.js"></script>
+<script src="data/catalog-17.js"></script>
+<script src="data/catalog-18.js"></script>
+<script src="data/catalog-19.js"></script>
+<script src="data/catalog-20.js"></script>
+<script src="data/catalog-21.js"></script>
+<script src="data/catalog-22.js"></script>
+<script src="data/catalog-23.js"></script>
+<script src="data/catalog-24.js"></script>
+<script src="data/catalog-25.js"></script>
+<script src="data/catalog-26.js"></script>
+<script src="data/catalog-27.js"></script>
+<script src="data/catalog-28.js"></script>
+<script src="data/catalog-29.js"></script>
+<script src="data/catalog-30.js"></script>
+<script src="data/catalog-31.js"></script>
+<script src="data/catalog-32.js"></script>
+<script src="data/catalog-33.js"></script>
+<script src="data/catalog-34.js"></script>
+<script src="data/catalog-35.js"></script>
+<script src="data/catalog-36.js"></script>
+<script id="catalog-data" type="application/json"></script>
+<script>document.getElementById('catalog-data').textContent=window.__CATALOG_CHUNKS.join('');delete window.__CATALOG_CHUNKS;</script>
+<script>
+'use strict';
+const DATA=JSON.parse(document.getElementById('catalog-data').textContent), $=id=>document.getElementById(id), nf=new Intl.NumberFormat('pt-BR');
+let page=0, filtered=[], favorites=new Set();
+try{favorites=new Set(JSON.parse(localStorage.getItem('deep-winter-combos-v1')||'[]'));}catch{}
+const controls=['status','top','bottom','shoe','layers','search','onlyFav'];
+const roleName=(id,l)=>id===l.shoe?'Calçado':id===l.top?(id==='89'?'Macacão':'Parte de cima'):id===l.bottom?'Calça':id==='91'?'Blazer':'Colete';
+const elt=(tag,attrs={},text)=>{const e=document.createElement(tag);for(const[k,v]of Object.entries(attrs))e.setAttribute(k,v);if(text!==undefined)e.textContent=text;return e;};
+const option=(id,value,label)=>$(id).append(elt('option',{value},label));
+const unique=key=>[...new Set(DATA.looks.map(l=>l[key]).filter(Boolean))].sort((a,b)=>a.localeCompare(b,undefined,{numeric:true}));
+for(const n of unique('top'))option('top',n,n+' · '+DATA.pieces[n].kind);
+for(const n of unique('bottom'))option('bottom',n,n+' · '+DATA.pieces[n].color);
+for(const n of DATA.shoes)option('shoe',n,n+' · '+DATA.pieces[n].kind);
+DATA.layers.forEach((a,i)=>option('layers',a.join(','),a.length?a.join(' + '):'Sem sobreposição'));
+$('title').textContent=nf.format(DATA.looks.length)+' combinações de cor';
+$('totals').textContent=nf.format(DATA.totals.direct)+' diretas por cor · '+nf.format(DATA.totals.conditional)+' condicionais · '+nf.format(DATA.groups.length)+' bases de roupa';
+$('footer').textContent='Modelo completo: '+nf.format(DATA.looks.length)+' conjuntos únicos. Até 3 cores, até 1 estampa e no máximo um colete com um blazer.';
+for(const n of ['52','66','69','91','92D','92B','92E']){const f=elt('figure');f.append(elt('img',{src:DATA.images[n],alt:DATA.pieces[n].kind+' '+n}),elt('figcaption',{},n+' · '+(n==='91'?'Blazer':n.startsWith('92')?'Calçado':'Colete')));$('legend').append(f);}
+function matches(l){
+ if($('status').value!=='all'&&l.status!==$('status').value)return false;
+ if($('top').value&&l.top!==$('top').value)return false;
+ if($('bottom').value&&($('bottom').value==='none'?l.bottom!==null:l.bottom!==$('bottom').value))return false;
+ if($('shoe').value&&l.shoe!==$('shoe').value)return false;
+ if($('layers').value!=='all'&&l.layers.join(',')!==$('layers').value)return false;
+ if($('onlyFav').checked&&!favorites.has(l.id))return false;
+ const tokens=$('search').value.trim().toUpperCase().split(/[\s,+;]+/).filter(Boolean);
+ return tokens.every(t=>/^L\d+$/.test(t)?l.id==='L'+t.slice(1).padStart(4,'0'):/^B\d+$/.test(t)?l.group==='B'+t.slice(1).padStart(3,'0'):l.pieces.includes(/^\d+$/.test(t)?t.padStart(2,'0'):t));
+}
+function refresh(){page=0;filtered=DATA.looks.filter(matches).sort((a,b)=>a.layers.length-b.layers.length||a.id.localeCompare(b.id));render();}
+function render(){
+ const pages=Math.max(1,Math.ceil(filtered.length/24));page=Math.min(page,pages-1);
+ document.querySelectorAll('.page-label').forEach(e=>e.textContent=`Página ${page+1} de ${pages}`);
+ document.querySelectorAll('.prev').forEach(e=>e.disabled=page===0);document.querySelectorAll('.next').forEach(e=>e.disabled=page>=pages-1);
+ const d=filtered.filter(x=>x.status==='direct').length,c=filtered.length-d;
+ $('results').textContent=nf.format(filtered.length)+' looks encontrados · '+nf.format(d)+' diretos · '+nf.format(c)+' condicionais';
+ $('grid').replaceChildren();
+ if(!filtered.length){$('grid').append(elt('p',{class:'empty'},'Nenhuma combinação passa nesses filtros. Troque uma peça ou limpe os filtros.'));return;}
+ for(const l of filtered.slice(page*24,(page+1)*24)){
+  const article=elt('article',{class:'look','data-look-id':l.id});
+  const head=elt('div',{class:'look-head'}), title=elt('div');title.append(elt('span',{class:'look-id'},l.id),elt('span',{class:'badge '+l.status},l.status==='direct'?'DIRETA':'CONDICIONAL'));
+  const fav=elt('button',{type:'button',class:'fav','aria-label':'Favoritar '+l.id,'aria-pressed':String(favorites.has(l.id))},favorites.has(l.id)?'♥':'♡');
+  fav.addEventListener('click',()=>{favorites.has(l.id)?favorites.delete(l.id):favorites.add(l.id);try{localStorage.setItem('deep-winter-combos-v1',JSON.stringify([...favorites]));}catch{}if($('onlyFav').checked)refresh();else{fav.textContent=favorites.has(l.id)?'♥':'♡';fav.setAttribute('aria-pressed',String(favorites.has(l.id)));}});
+  head.append(title,fav);article.append(head);
+  const composition=elt('div',{class:'composition'});
+  for(const n of l.pieces){const f=elt('figure',{class:'piece'}),cap=elt('figcaption');cap.append(elt('strong',{},n),document.createTextNode(roleName(n,l)));f.append(elt('img',{src:DATA.images[n],alt:'Peça '+n+': '+DATA.pieces[n].kind+', '+DATA.pieces[n].color,loading:'lazy'}),cap);composition.append(f);}
+  article.append(composition);const body=elt('div',{class:'look-body'}),colors=elt('div',{class:'colors'});
+  for(const key of l.colors){const color=elt('span',{class:'color'}),sw=elt('span',{class:'swatch','aria-hidden':'true'});sw.style.background=DATA.colors[key][0];color.append(sw,document.createTextNode(DATA.colors[key][1]));colors.append(color);}
+  body.append(colors,elt('p',{class:'look-info'},`${l.colors.length} ${l.colors.length===1?'cor':'cores'} · ${l.prints} ${l.prints===1?'estampa':'estampas'} · ${l.layers.length?l.layers.join(' + '):'Sem sobreposição'}`));
+  if(l.conditions.length){const details=elt('details',{class:'condition',open:''});details.append(elt('summary',{},'Condições para usar'));l.conditions.forEach(t=>details.append(elt('p',{},t)));body.append(details);}
+  body.append(elt('div',{class:'pdf-ref'},l.group+' · Atlas PDF, página '+l.pdfPage));article.append(body);$('grid').append(article);
+ }
+}
+for(const id of controls)$(id).addEventListener(id==='search'?'input':'change',refresh);
+document.querySelectorAll('.prev').forEach(b=>b.addEventListener('click',()=>{page--;render();$('results').scrollIntoView({block:'start'});}));
+document.querySelectorAll('.next').forEach(b=>b.addEventListener('click',()=>{page++;render();$('results').scrollIntoView({block:'start'});}));
+$('reset').addEventListener('click',()=>{$('status').value='direct';['top','bottom','shoe','search'].forEach(n=>$(n).value='');$('layers').value='all';$('onlyFav').checked=false;refresh();});
+$('print').addEventListener('click',()=>window.print());
+refresh();
+</script></body></html>
